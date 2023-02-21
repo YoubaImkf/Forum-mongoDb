@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body {
+    background-image: url('../assets/pramod-tiwari-X_KNb-vQv-0-unsplash.jpg');
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(61, 59, 59, 0.3);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-form h2 {
+    color: #6e6e6e;
+    font-size: 32px;
+    font-weight:700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.login-form .error {
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.login-form input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.login-form button {
+    background-color: #87839e;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.login-form button:hover {
+    background-color: #be709e;
+}
+
+.login-form a {
+    color: #f395cc;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+.login-form .message {
+    margin-top: 15px;
+}

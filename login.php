@@ -35,6 +35,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="./CSS/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    
+    
 </head>
 <body>
     <form class="login-form" action="login.php" method="post">
@@ -45,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="text" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Enter</button>
-        <p class="message">Not registered? <a href="./views/register.php">Create an account</a></p>
+        <p class="message">Not registered? <a href="register.php">Create an account</a></p>
     </form>
 </body>
 </html>

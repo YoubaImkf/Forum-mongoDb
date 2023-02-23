@@ -33,7 +33,7 @@ function authenticateUser($email, $password) {
 }
 
 // Register a new user
-function registerUser($email, $password) {
+function registerUser($email, $password, $firstName, $lastName) {
     global $users;
 
     // Hash the password before storing it in the database
@@ -42,7 +42,9 @@ function registerUser($email, $password) {
     // Insert the new user into the 'users' collection
     $result = $users->insertOne([
         'email' => $email,
-        'password' => $hashedPassword
+        'password' => $hashedPassword,
+        'firstName' => $firstName,
+        'lastName' => $lastName
     ]);
 
     return $result->getInsertedId();
@@ -88,10 +90,20 @@ function createResponse($topicId, $userId, $content) {
 }
 
 // Get all responses to a topic
-function getResponses($topicId) {
+function getResponsesByTopicId($topicId) {
     global $responses;
     // Find all responses with the given topic ID
     $cursor = $responses->find(['topic_id' => new MongoDB\BSON\ObjectID($topicId)]);
+
+    // Return the responses as an array
+    return iterator_to_array($cursor);
+}
+
+function getAllResponses() {
+    global $responses;
+
+    // Find all responses in the 'responses' collection
+    $cursor = $responses->find();
 
     // Return the responses as an array
     return iterator_to_array($cursor);
@@ -107,13 +119,12 @@ function getTopicById($topicId) {
     return $topic;
 }
 
-function getResponsesForTopic($topicId) {
-    global $responses;
+function getUserNameById($userId) {
+    global $users;
 
-    // Find all responses with the given topic ID
-    $cursor = $responses->find(['topic_id' => new MongoDB\BSON\ObjectID($topicId)]);
+    // Find the user with the given ID
+    $user = $users->findOne(['_id' => new MongoDB\BSON\ObjectID($userId)]);
 
-    // Return the responses as an array
-    return iterator_to_array($cursor);
-
+    // Return the user's name
+    return $user['firstName']." ".$user['lastName'];
 }

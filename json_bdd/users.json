@@ -1,32 +1,17 @@
-[
-  {
-    "firstName": "Isabella",
-    "lastName": "Johnson",
-    "email": "isabella.johnson1234@example.com",
-    "password": "1234"
+[{
+  "_id": {
+    "$oid": "63f38049cb327d811a0f47f7"
   },
-  {
-    "firstName": "Oliver",
-    "lastName": "Miller",
-    "email": "oliver.miller1234@example.com",
-    "password": "5678"
+  "email": "cccc@ccc.com",
+  "password": "$2y$10$x8EF8HPqik.13eH6srFpEubk0Xuwb95KaWEiL4xfM0C4u4N7OkKci",
+  "firstName": "Josua",
+  "lastName": "Leroy"
+},{
+  "_id": {
+    "$oid": "63f64b8465fe06f0ce07d566"
   },
-  {
-    "firstName": "Sophia",
-    "lastName": "Garcia",
-    "email": "sophia.garcia1234@example.com",
-    "password": "9101"
-  },
-  {
-    "firstName": "Noah",
-    "lastName": "Clark",
-    "email": "noah.clark1234@example.com",
-    "password": "1111"
-  },
-  {
-    "firstName": "Emma",
-    "lastName": "Lee",
-    "email": "emma.lee1234@example.com",
-    "password": "2222"
-  }
-]
+  "email": "Hermione@gmail.com",
+  "password": "$2y$10$OhCp.UX07fzjz3kYSRIL1uxSigMuTkMFSoNw/acqv.V.NxI5yqQJ.",
+  "firstName": "Hermione",
+  "lastName": "Potter"
+}]

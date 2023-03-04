@@ -1,8 +1,6 @@
 <?php
-    include 'db.php';
-?>
+    require_once 'db.php';
 
-<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -27,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Register</title>
     <link rel="stylesheet" type="text/css" href="./CSS/register.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
-    
+    <link rel="icon" href="./assets/favicon.png" /> 
 
 </head>
 <body>

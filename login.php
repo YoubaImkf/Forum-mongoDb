@@ -1,9 +1,6 @@
 <?php
-    include 'db.php';
-?>
-
-<?php
-session_start();
+    session_start();
+    require_once 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
@@ -17,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['user_id'] = $userId;
 
         // Redirect to the home page
-        header('Location: get_topic.php');
+        header('Location: home.php');
         exit;
     } else {
         // Show an error message
@@ -36,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="./CSS/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
-    
+    <link rel="icon" href="./assets/favicon.png" />
     
 </head>
 <body>

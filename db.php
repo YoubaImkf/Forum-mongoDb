@@ -13,7 +13,7 @@ $users = $mongo->Forum->users;
 
 $topics = $mongo->Forum->topics;
 
-$responses = $mongo->Forum->responses;
+$responds = $mongo->Forum->responds;
 
 
 // Check if a user exists with the given email and password
@@ -76,11 +76,11 @@ function getTopics() {
 }
 
 // Create a new response to a topic
-function createResponse($topicId, $userId, $content) {
-    global $responses;
+function createResponds($topicId, $userId, $content) {
+    global $responds;
 
-    // Insert the new response into the 'responses' collection
-    $result = $responses->insertOne([
+    // Insert the new response into the 'responds' collection
+    $result = $responds->insertOne([
         'topic_id' => new MongoDB\BSON\ObjectID($topicId),
         'content' => $content,
         'userId' => $userId
@@ -89,23 +89,31 @@ function createResponse($topicId, $userId, $content) {
     return $result->getInsertedId();
 }
 
-// Get all responses to a topic
-function getResponsesByTopicId($topicId) {
-    global $responses;
-    // Find all responses with the given topic ID
-    $cursor = $responses->find(['topic_id' => new MongoDB\BSON\ObjectID($topicId)]);
+// Get all responds to a topic
+function getRespondsByTopicId($topicId) {
+    global $responds;
+    // Find all responds with the given topic ID
+    $cursor = $responds->find(['topic_id' => new MongoDB\BSON\ObjectID($topicId)]);
 
-    // Return the responses as an array
+    // Return the responds as an array
     return iterator_to_array($cursor);
 }
 
-function getAllResponses() {
-    global $responses;
+function getCountResponsesByTopicId($topicId) {
+    global $responds;
+    // Find all responds with the given topic ID
+    $cursor = $responds->find(['topic_id' => new MongoDB\BSON\ObjectID($topicId)]);
+    // Return the responds as an array
+    return count($cursor->toArray());
+}
 
-    // Find all responses in the 'responses' collection
-    $cursor = $responses->find();
+function getAllResponds() {
+    global $responds;
 
-    // Return the responses as an array
+    // Find all responds in the 'responds' collection
+    $cursor = $responds->find();
+
+    // Return the responds as an array
     return iterator_to_array($cursor);
 }
 

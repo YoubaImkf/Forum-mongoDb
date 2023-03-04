@@ -1,10 +1,8 @@
 <?php
-    include 'db.php';
-?>
+    require_once 'db.php';
 
-<?php
+    session_start();
     session_destroy();
     header('Location: login.php');
     exit;
-?>
-
+?> 

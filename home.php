@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($content != '') {
             // Create the new response
             createResponds($topicId, $userId, $content);
-            header('Location: get_topic.php');
+            header('Location: home.php');
         };
     }
 }
@@ -46,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./CSS/topic.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/favicon.png" /> 
 </head>
 
 <body>
@@ -68,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <p><?= "Comment: ". getCountResponsesByTopicId($topic['_id'])?></p>
                         <h4 id="add-resp">click to respond</h4>
                     </div>
-                    <form class="form-post display-none" action="get_topic.php method="POST">
+                    <form class="form-post display-none" action="home.php" method="POST">
                         <textarea name="content" rows="4" cols="50" placeholder="Write you comment..."></textarea>
                         <input type="hidden" name="topic_Id" value="<?= $topic['_id'] ?>">
                         <input type="hidden" name="topicUserId" value="<?= $topic['user_id'] ?>">

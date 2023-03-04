@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "63f50d8648f66ee3c8083817"
+  },
+  "topic_id": {
+    "$oid": "63f381abf28fcdd0121208df"
+  },
+  "content": "Salut toi ",
+  "userId": {
+    "$oid": "63f38049cb327d811a0f47f7"
+  }
+},{
+  "_id": {
+    "$oid": "63f78384c2f081cdd605c402"
+  },
+  "topic_id": {
+    "$oid": "63f381abf28fcdd0121208df"
+  },
+  "content": "cc toi",
+  "userId": {
+    "$oid": "63f64b8465fe06f0ce07d566"
+  }
+},{
+  "_id": {
+    "$oid": "63f784d2c2f081cdd605c405"
+  },
+  "topic_id": {
+    "$oid": "63f38329cb327d811a0f47f8"
+  },
+  "content": "2eme topic \r\n",
+  "userId": {
+    "$oid": "63f64b8465fe06f0ce07d566"
+  }
+},{
+  "_id": {
+    "$oid": "63ff70c716580b9c32079ca8"
+  },
+  "topic_id": {
+    "$oid": "63f38329cb327d811a0f47f8"
+  },
+  "content": "still working ?",
+  "userId": {
+    "$oid": "63f64b8465fe06f0ce07d566"
+  }
+},{
+  "_id": {
+    "$oid": "640346b2a5375694b505394e"
+  },
+  "topic_id": {
+    "$oid": "63f38329cb327d811a0f47f8"
+  },
+  "content": "cc",
+  "userId": {
+    "$oid": "63f64b8465fe06f0ce07d566"
+  }
+},{
+  "_id": {
+    "$oid": "640350fda5375694b5053952"
+  },
+  "topic_id": {
+    "$oid": "63f381abf28fcdd0121208df"
+  },
+  "content": "Alors je suis tout a fait d'accord",
+  "userId": {
+    "$oid": "63f64b8465fe06f0ce07d566"
+  }
+},{
+  "_id": {
+    "$oid": "6403510ea5375694b5053953"
+  },
+  "topic_id": {
+    "$oid": "63f381abf28fcdd0121208df"
+  },
+  "content": "Les autres bloggeurs y répondent ou commentent ces mêmes réponses, créant ainsi des fils de discussion comme ci-dessous :Les autres bloggeurs y répondent ou commentent ces mêmes réponses, créant ainsi des fils de discussion comme ci-dessous :",
+  "userId": {
+    "$oid": "63f64b8465fe06f0ce07d566"
+  }
+},{
+  "_id": {
+    "$oid": "64035453a5375694b5053955"
+  },
+  "topic_id": {
+    "$oid": "63ff728216580b9c32079cb1"
+  },
+  "content": "j'ai vu la meme chose que toi",
+  "userId": {
+    "$oid": "63f64b8465fe06f0ce07d566"
+  }
+},{
+  "_id": {
+    "$oid": "640357a9a5375694b5053956"
+  },
+  "topic_id": {
+    "$oid": "63f381abf28fcdd0121208df"
+  },
+  "content": "dazadzazdza",
+  "userId": {
+    "$oid": "63f64b8465fe06f0ce07d566"
+  }
+}]

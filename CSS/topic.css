@@ -13,34 +13,27 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* background-color: #f8f8f8e0;
-     */
-    background-image: url('../assets/pramod-tiwari-KSvZHhM-Jbw-unsplash.jpg');
+    background-color: #918ead;
+
+    /*background-image: url('../assets/pramod-tiwari-KSvZHhM-Jbw-unsplash.jpg');*/
 }
 
-.header {
+.link {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
-    height: 60px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(61, 59, 59, 0.3);
-    padding: 0 20px;
-    margin-bottom: 50px;
+    max-width: 1500px;
+    padding: 20px;
 }
 
-.header img {
-    width: 40px;
-    height: 4 0px;
-}
-
-.header a {
-    color: #111111;
+.link a {
+    color: #fff;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
+    margin-right: 40px;
+    text-decoration: underline;
 }
 
 .topic {
@@ -56,7 +49,6 @@ body {
     background-color: #fff;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-
 }
 
 
@@ -64,6 +56,15 @@ body {
     margin-top: 40px;
     color: #f395cc;
     cursor: pointer;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
 }
 
 .post-container .topic h1 {
@@ -113,15 +114,14 @@ body {
 .form-post textarea:focus {
     outline: none;
 }
-
-.display-none {
-    display: none;
-}
-
-.post-add h4 {
+.details{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
 }
+
 
 #author {
     color: #ada9c0;
@@ -130,8 +130,69 @@ body {
 }
 
 .response {
+    color: #fff;
+    border-radius: 5px;
+    background-color: #ffffff31;
+    margin-top: 20px;
+    width: 100%;
+    line-height: 1.5em;
+    margin-left: 15%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 20px;
+    padding: 5px;
+    text-align: right;
+}
+
+.responses {
+    width: calc(100% - 60%);
+}
+
+.response span {
+    color: #000000;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.response-block {
+    margin-bottom: 20px;
+}
+
+
+#add-resp-to-resp {
+    cursor: pointer;
+}
+
+.form-post-to-resp {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form-post-to-resp textarea {
+    width: 100%;
+    border: 1px solid #a5a5a5;
+    border-radius: 5px;
+    color: #686565;
+    padding: 10px;
+}
+
+.form-post-to-resp input:hover {
+    background-color: #be709e;
+}
+
+.form-post-to-resp input {
+    background-color: #87839e;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 20%;
+}
+.display-none {
+    display: none;
 }
